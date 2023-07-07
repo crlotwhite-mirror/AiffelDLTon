@@ -1,11 +1,11 @@
-def preprocess():
+def preprocess(path='train.csv'):
     import pandas as pd
     from koeda import EDA
     import numpy as np
     from sklearn.preprocessing import LabelEncoder
 
     # 데이터 불러오기
-    data = pd.read_csv('train.csv')
+    data = pd.read_csv(path)
 
     # class 열을 숫자로 변환
     encoder = LabelEncoder()
